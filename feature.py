@@ -489,3 +489,12 @@ class FeatureExtraction:
     
     def getFeaturesList(self):
         return self.features
+
+def extract_features(url):
+    extractor = FeatureExtraction(url)
+    return extractor.getFeaturesList()
+
+# Example usage:
+url_to_check = "https://www.google.com"
+extracted_features = extract_features(url_to_check)
+print(extracted_features)
